@@ -15,4 +15,8 @@ export class FaqsComponent {
 
   questions: any = faq;
 
+  toggleitem(item:any){
+    item.isCollapsed = !item.isCollapsed;
+  }
+
 }
