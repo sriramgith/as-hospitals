@@ -1,0 +1,38 @@
+[
+    {
+        "img": "/Assets/psych_individual.jpg", 
+        "fieldname": "Individual Therapy", 
+        "fielddetails": "Managing Anxiety, Depression and Stress in adults.", 
+        "no": 0
+    },
+    {
+        "img": "/Assets/psych_couples.jpg", 
+        "fieldname": "Couples Counselling", 
+        "fielddetails": "Improving Communication, Intimacy, and conflict resolution in partnerships.", 
+        "no": 1
+    },
+    {
+        "img": "/Assets/psych_family.jpg", 
+        "fieldname": "Family Counselling", 
+        "fielddetails": "Addressing Family Conflict, boundary issues, and systemic communication.", 
+        "no": 2
+    },
+    {
+        "img": "/Assets/psych_child.jpg",
+        "fieldname": "Child Psychology", 
+        "fielddetails": "Addressing Behavioral Issues, School Stress, and developmental concerns.", 
+        "no": 3
+    },
+    {
+        "img": "/Assets/psych_cbt.jpg", 
+        "fieldname": "Behavioral Therapy", 
+        "fielddetails": "Sessions for Modifying negative thought patterns and behaviors.", 
+        "no": 4
+    },
+    {
+        "img": "/Assets/psych_trauma.jpg", 
+        "fieldname": "Grief & Trauma", 
+        "fielddetails": "Compassionate care for navigating loss and post-traumatic stress.", 
+        "no": 5
+    }   
+]

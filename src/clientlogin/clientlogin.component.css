@@ -1,0 +1,131 @@
+.login{
+    margin-left: 40vw;
+    margin-top: 4vw;
+    height: 32vw;
+}
+
+.pageTitle{
+    color: blueviolet;
+    margin-left: -4vw;
+    margin-bottom: 1.5vw;
+}
+
+.label {
+    margin-bottom: 0.5vw;
+    font-weight: 500;
+    margin-top: 0.5vw;
+}
+
+.required{
+    color: red;
+}
+
+.input{
+    width: 20.5vw;
+    height: 3vw;
+    border-radius: 0.5vw;
+    border: 0.1px solid black;
+    padding: 0.5vw;
+}
+
+.toggle-password {
+    position: absolute;
+    margin-left: -1.75vw;
+    margin-top: 0.75vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+}
+
+.pwditems{
+    display: flex;
+}
+
+.errormsg{
+    color: red;
+    font-size: 1vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0vw;
+}
+
+.forgotpwd{
+    text-decoration: none;
+    font-size: 1vw;
+    position: absolute;
+    margin-top: 0.5vw;
+    left: 53vw;
+    cursor: pointer;
+    color: blueviolet;
+}
+
+.forgotpwd:hover{
+    color: red;
+}
+
+.cptcha{
+    color: blueviolet;
+    font-size: 1.3vw;
+    margin-top: 1vw;
+    border: 1px dashed black;
+    padding: 0.75vw;
+    width: 7.5vw;
+}
+
+.capcthatxt{
+    transform: skew(30deg, 18deg);
+    margin-right: 0.5vw;
+    display: inline-block;
+}
+
+.capreset{
+    cursor: pointer;
+    position: absolute;
+    margin-top: -4vw;
+    margin-left: 8vw;
+    font-size: 1.5vw;
+    color: blueviolet;
+}
+
+.buttons{
+    display: flex;
+    margin-top: 2vw;
+}
+
+.loginBtn {
+    width: 5vw;
+    height: 3vw;
+    padding: 0.5vw;
+    background: gray;
+    border: none;
+    border-radius: 0.5vw;
+    color: white;
+    margin-right: 9.5vw;
+    cursor: context-menu;
+    pointer-events: none;
+}
+
+.loginBtn:hover{
+    background: blueviolet;
+}
+
+.validlogin{
+    cursor: pointer;
+    pointer-events:auto;
+    background: black;
+}
+
+.signupBtn{
+    width: 6vw;
+    height: 3vw;
+    padding: 0.5vw;
+    background: green;
+    border: none;
+    border-radius: 0.5vw;
+    color: white;
+    margin-right: 2vw;
+    cursor: pointer;    
+}
+
+.signupBtn a{
+    text-decoration: none;
+    color: white;
+}

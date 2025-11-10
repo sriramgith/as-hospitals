@@ -1,0 +1,22 @@
+<div class="main-header">
+    <a class="home" href="/home">
+    <img src="/Assets/hosplogo.jpg" class="logo" />
+    </a>
+    <div *ngIf="issignedin !='true'">
+        <button class="Signup">
+            <a href="/signup">Signup</a>
+        </button>
+        <button class="login client">
+            <a href="/clientlogin">Client Signin</a>
+        </button>    
+        <button class="login">
+            <a href="/doctorlogin">Doctor Signin</a>
+        </button>
+    </div>
+    <div *ngIf="issignedin =='true'">
+        <button (click)="logout()" class="logout">
+            <a>Logout</a>
+        </button>
+    </div>
+   
+</div>

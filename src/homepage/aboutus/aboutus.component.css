@@ -1,0 +1,102 @@
+.about-us-container {
+    max-width: 88.5vw;
+    margin: 2.2vw auto;
+    min-height: 85vh; 
+    font-family: Graphik;
+    background-color: #f9fafb;
+    border-radius: 1.1vw;
+    box-shadow: 0 0.625vw 0.9375vw -0.1875vw rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    padding: 1.4vw 0;
+    background-color: rgba(238, 242, 255, 0.7);
+    border-top-left-radius: 1.1vw;
+    border-top-right-radius: 1.1vw;
+    flex-shrink: 0;
+}
+
+.title {
+    font-size: 2.5vw; 
+    font-weight: 800;
+    color: #3730a3;
+}
+
+.content-wrapper {
+    padding: 1.1vw 1.65vw 2.2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1vw; 
+    flex-grow: 1;
+}
+
+.main-content-row {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    gap: 1.65vw;
+}
+
+.section {
+    background-color: white;
+    box-shadow: 0 0.25vw 0.375vw -0.0625vw rgba(0, 0, 0, 0.1);
+    border-top: 0.3vw solid #4f46e5;
+    border-radius: 0.75vw;
+    padding: 1.1vw;
+}
+
+.section-title {
+    font-size: 2vw; 
+    font-weight: 700;
+    color: #4338ca;
+    margin-bottom: 0.55vw;
+}
+
+.section-text {
+    font-size: 1.1vw;
+    line-height: 1.5;
+    color: #374151;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.825vw;
+}
+
+.approach-item {
+    padding: 0.825vw;
+    border-radius: 0.55vw;
+    background-color: #f9fafb;
+    border: 0.1vw solid #e5e7eb;
+}
+
+.approach-heading {
+    font-weight: 700;
+    color: #4f46e5;
+    display: block;
+    margin-bottom: 0.275vw;
+    font-size: 1.05vw;
+}
+
+.approach-text {
+    font-size: 0.95vw;
+    color: #4b5563;
+}
+
+.cta-text {
+    text-align: center;
+    font-size: 1.5vw; 
+    font-style: italic;
+    color: #4338ca;
+    font-weight: 600;
+    padding: 0.55vw 0 1.1vw;
+    border-bottom: 0.1vw solid #4338ca;
+    width: fit-content;
+    margin: 0.55vw auto 0;
+    flex-shrink: 0;
+}

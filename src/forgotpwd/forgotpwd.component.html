@@ -1,0 +1,38 @@
+<div class="forgotpwd">
+    <h3 class="title">Reset your password</h3>
+    <form #pwdForm="ngForm" class="pwdform">
+        <div>
+            <p class="label">Registered Phone Number<span class="required">*</span>
+            </p>
+            <input type="number" class="input" [(ngModel)]="phone" name="phone" #phoneno="ngModel" required placeholder="Enter your phone number" pattern="^[0-9]{10}$"/>
+            <p class="errormsg" *ngIf="phoneno.invalid && phoneno.touched">
+                <span *ngIf="phoneno.errors?.['required']">Phone number is required</span>
+                <span *ngIf="phoneno.errors?.['pattern']">Invalid phone number</span>
+                <span *ngIf="invaluser">Incorrect phone number</span>
+            </p>
+        </div>
+        <div>
+            <p class="label">Password<span class="required">*</span>
+            </p>
+            <input class="input" id="pwd" [type]="passtype" placeholder="Enter new password" required [(ngModel)]="newpwd" name="newpwd" #pwd="ngModel" pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+]).{8,}$" />
+            <i class="fa passicon" [ngClass]="showpass? 'bi-eye-slash' : 'bi-eye'" (click)="showpassword()"></i>
+            <p class="errormsg" *ngIf="pwd.invalid && pwd.touched">
+                <span *ngIf="pwd.errors?.['required']">Password is required</span>
+                <span *ngIf="pwd.errors?.['pattern'] && newpwd!=''">Password must contain atleast 1 caps, 1 number & 1 special character</span>
+            </p>
+        </div>
+        <div>
+            <p class="label">Confirm Password<span class="required">*</span>
+            </p>
+            <input class="input" [type]="confpasstype" placeholder="Re-enter your password" [(ngModel)]="conpwd" required name="conpwd" #confpwd="ngModel" />
+            <i class="fa confpassicon" [ngClass]="showconfpass? 'bi-eye-slash' : 'bi-eye'" (click)="showconfirmpassword()"></i>
+            <p class="errormsg" *ngIf="confpwd.touched">
+                <span *ngIf="confpwd.errors?.['required']">Confirm password is required</span>
+                <span *ngIf="conpwd!=newpwd && conpwd!=''">Password not matching</span>
+            </p>
+        </div>
+        <div>
+            <button class="submit" [disabled]="pwdForm.invalid || conpwd!=newpwd" (click)="submitpwd()">Submit</button>
+        </div>
+    </form>
+</div>

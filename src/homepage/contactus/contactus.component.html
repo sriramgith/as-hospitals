@@ -1,0 +1,14 @@
+<div class="contactus">
+    <h2>For Appointments Reach Out to Us</h2>
+    <ngb-carousel #carousel2 [showNavigationArrows]="true" class="reachslide" [showNavigationIndicators]="false" [wrap]="true">
+        <ng-template ngbSlide *ngFor="let reachout of reachOut; let i=index">
+            <div class="reachoutitems">
+                <h3>{{reachout.type}}</h3>
+                <p>{{reachout.detail1}}</p>
+                <p>{{reachout.detail2}}</p>
+                <p>{{reachout.detail3}}</p>
+                <p>{{reachout.detail4}}</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>

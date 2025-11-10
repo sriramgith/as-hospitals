@@ -1,0 +1,120 @@
+<div class="clientPage">
+    <h2 class="clientname" [innerHTML]="'Hello '+ user"></h2>
+    <div class="dashBoard">
+        <p class="edit">
+            <button class="editBtn" (click)="iseditform()">Edit Details</button>
+        </p>
+        <div class="clientDetails">
+            <div class="details">
+                <div style="margin-right: 35vw;">
+                    <p class="detailstitle">Name:
+                        <span>{{patient.name}}</span>
+                    </p>
+                    <p class="detailstitle">Phone Number:
+                        <span>{{patient.phone}}</span>
+                    </p>
+                    <p class="detailstitle">Email:
+                        <span>{{patient.email}}</span>
+                    </p>
+                    <p class="detailstitle">Age:
+                        <span>{{patient.age}}</span>
+                    </p>
+                </div>
+                <div>
+                    <p class="detailstitle">Presenting Illness:
+                        <span>{{patient.illness}}</span>
+                    </p>
+                    <p class="detailstitle" *ngIf="!dataService.newUser">Last Review Date:
+                        <span>{{patient.lastReview}}</span>
+                    </p>
+                    <p class="detailstitle" *ngIf="dataService.newUser">Next Review Date:
+                        <span>Our team will contact you</span>
+                    </p>
+                    <p class="detailstitle" *ngIf="!dataService.newUser">Reporting Doctor Name:
+                        <span>{{patient.doctor}}</span>
+                    </p>
+                    <p class="detailstitle" *ngIf="dataService.newUser">Reporting Doctor Name:
+                        <span>Yet to be Assigner</span>
+                    </p>
+                    <p class="detailstitle" *ngIf="!dataService.newUser">Task Assigned:
+                        <span>{{patient.task}}</span>
+                    </p>
+                </div>
+            </div>
+            <p class="nextrvw" *ngIf="!dataService.newUser">Your Upcoming review is on 
+                <span class="nextdate">{{patient.nextReview}} </span>
+            </p>
+            <a class="modifydate" *ngIf="!dataService.newUser" (click)="modifydate()">Request to modify date</a>
+            <div *ngIf="!dataService.newUser">
+                <div class="clntTble" *ngIf="!issubmitted else submittrue">
+                    <div class="moodtracker">
+                        <h5 class="moodlabel">Today's Mood</h5>
+                        <span class="item{{i}}" [ngClass]="moodToday==moodstate.mood ? 'activemood' : 'inactivemood'" *ngFor="let moodstate of moodStates let i=index" (click)="moodtod(moodstate)">{{moodstate.mood}}</span>
+                    </div>
+                    <h5>Task Comment for 
+                        <span class="nextdate">
+                            {{today}}
+                        </span>
+                    </h5>
+                    <textarea class="task" type="text" placeholder="Enter what have you done today" required name="task" [(ngModel)]="taskcomment" #task="ngModel" minlength="30"></textarea>
+                    <span class="charcount">{{taskcomment.length}}/{{maximlength}}</span>
+                    <p class="errormsg" *ngIf="task.touched && task.invalid">Please enter a minimum of 30 Characters</p>
+                    <p class="errormsg" *ngIf="taskcomment.length > 1000">Maximum Characters Limit of 500 exceeded</p>
+                    <button class="saveBtn" [disabled]="task.invalid || taskcomment.length>maximlength" (click)="savetask()">Save</button>                   
+                </div>    
+            </div>
+            <ng-template #submittrue>
+                <p class="successmsg">Today's Task Completed Successfully!!!!!!!!!!!</p>
+            </ng-template>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" *ngIf="isformeditted">
+    <div class="modal">
+        <button class="closebtn" (click)="cancelclientdetail();">x</button>
+        <form [formGroup]="clientform" (ngSubmit)="savedetails()">
+                <h4 class="formtitle">Edit your Details</h4>
+                <h5 class="lbltxt">Name</h5>
+                <p class="inptfld">
+                    <input type="text" formControlName="name" placeholder="Enter your name" />
+                </p>
+                <p class="errormsg" *ngIf="clientform.controls['name'].touched && clientform.controls['name'].invalid">Name is required</p>
+                <h5 class="lbltxt">Phone No</h5>
+                <p class="inptfld">
+                    <input type="number" formControlName="phone" placeholder="Enter your phone" />
+                </p>
+                <p class="errormsg" *ngIf="clientform.controls['phone'].touched && clientform.controls['phone'].invalid">
+                    <span *ngIf="clientform.controls['phone'].hasError('required')">Phone is required</span>
+                    <span *ngIf="clientform.controls['phone'].hasError('pattern')">Invalid phone number</span>
+                </p>
+                <h5 class="lbltxt">Email</h5>
+                <p class="inptfld">
+                    <input type="email" formControlName="email" placeholder="Enter your email" />
+                </p>
+                <p class="errormsg" *ngIf="clientform.controls['email'].touched && clientform.controls['email'].invalid">
+                    <span *ngIf="clientform.controls['phone'].hasError('required')">Email is required</span>
+                    <span *ngIf="clientform.controls['phone'].hasError('pattern')">Invalid email</span>
+                </p>
+                <h5 class="lbltxt">Age</h5>
+                <p class="inptfld">
+                    <input type="number" formControlName="age" placeholder="Enter your age" />
+                </p>
+                <p class="errormsg" *ngIf="clientform.controls['age'].touched && clientform.controls['age'].invalid">
+                    <span *ngIf="clientform.controls['age'].hasError('required')">Age is required</span>
+                    <span *ngIf="clientform.controls['age'].hasError('pattern')">Enter a valid 2 digit age</span>
+                </p>
+                <button class="formsave" [disabled]="clientform.invalid" type="submit">Save</button>                   
+                <button class="formsave cancelbtn" type="button" (click)="cancelclientdetail()">Cancel</button>                   
+        </form>
+    </div>
+</div>
+
+<div class="toaster" [ngStyle]="{display : toastermsg ? 'block': 'none'}">
+    <a class="toasterclose" (click)="closetoaster()">X</a>
+    <p>Details Saved Successfully!!!</p>
+</div>
+
+<div *ngIf="showtaskloader">
+    <img src="/Assets/loading.gif" class="loader" />
+</div>

@@ -1,0 +1,58 @@
+.homepagedoctors{
+    margin-left:4vw;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+}
+
+.ngcarousel{
+    margin-left: 34vw;
+    margin-top: 2vw;
+    width: 26%;
+}
+
+
+.doctors p {
+    margin-left: 5vw;
+    margin-top: 1vw;
+    margin-bottom: 0vw;
+}
+
+.docdesgination{
+    margin-left: 4vw!important;
+}
+
+.docspecialization{
+    margin-left: 2vw!important;
+}
+
+::ng-deep.carousel-control-prev {
+    margin-left: -10vw;
+    filter: invert(1);
+    margin-top: -7vw;
+}
+
+
+::ng-deep.carousel-control-next {
+    margin-left: -10vw;
+    filter: invert(1);
+    margin-top: -7vw;
+}
+::ng-deep.carousel-indicators{
+    top: 27vw;
+    left: -9vw;
+}
+::ng-deep.carousel-indicators button {
+    width: 30px !important;
+    height: 26px !important;
+    background-color: black !important;
+    box-sizing: border-box !important;
+}
+
+.docimage {
+    border: 0.1vw solid;
+    padding: 0.1vw;
+    height: 18vw;
+    width: 17vw;
+}
+
+

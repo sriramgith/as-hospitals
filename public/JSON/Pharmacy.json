@@ -1,0 +1,42 @@
+[
+    {
+        "name": "National Crisis Hotline",
+        "description": "Immediate emotional support and crisis intervention, 24/7.",
+        "location": "Porur"
+    },
+    {
+        "name": "Mindful Movement",
+        "description": "Partnered Yoga and Stress Reduction classes focused on mind-body connection.",
+        "location": "Ashok Nagar"
+    },
+    {
+        "name": "Grief Support Group",
+        "description": "Weekly community group for navigating loss and bereavement.",
+        "location": "K.K.Nagar"
+    },
+    {
+        "name": "Mental Health Library",
+        "description": "Access to digital and physical resource material on various psychological topics.",
+        "location": "CMBT"
+    },
+    {
+        "name": "Career Counselling",
+        "description": "Specialized vocational and career guidance partners for professional growth.",
+        "location": "Avadi"
+    },
+    {
+        "name": "Telehealth Platform",
+        "description": "Secure, seamless video access to your sessions and documentation.",
+        "location": "Tambaram"
+    },
+    {
+        "name": "Art Therapy",
+        "description": "Creative outlets for emotional processing and healing.",
+        "location": "Pallavaram"
+    },
+    {
+        "name": "Insomnia Program",
+        "description": "Specialized CBT-I program for improving sleep health and managing insomnia.",
+        "location": "Adayar"
+    }
+]

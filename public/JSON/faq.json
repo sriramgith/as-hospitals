@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "question": "What should I do when I feel stressed or overwhelmed?",
+    "answer": "Taking a moment for mindfulness meditation can be very helpful. Try focusing on your breath for 60 seconds, or engage your five senses by noticing small details in your immediate environment. This can help ground you in the present and reduce anxiety.",
+    "isCollapsed": true
+  },
+  {
+    "id": 2,
+    "question": "How do my thoughts influence my mood?",
+    "answer": "In psychology, this is often called the Cognitive Model. The core idea is that your thoughts, not external events, primarily determine your feelings. By learning to identify and gently challenge negative thought patterns, you can directly improve your emotional state.",
+    "isCollapsed": true
+  },
+  {
+    "id": 3,
+    "question": "What is the goal of psychological counseling?",
+    "answer": "The goal is generally to help individuals develop better coping mechanisms, manage emotional challenges, improve relationships, and achieve greater personal insight and well-being. It is a collaborative process between you and your counselor.",
+    "isCollapsed" : true
+  },
+  {
+    "id": 4,
+    "question": "When should I consider speaking to a therapist?",
+    "answer" : "You should consider it if distress (like anxiety or sadness) starts interfering with your daily life, work, or relationships. Therapy is also beneficial for personal growth, navigating major life changes, or wanting to understand yourself better.",
+    "isCollapsed": true
+  },
+  {
+      "id": 5,
+      "question": "How do I modify my next review date?",
+      "answer": "To request a change to your scheduled review, navigate to your Patient Dashboard. Click the 'Raise Request' button next to your appointment details. Select your preferred new date and submit the request. Your doctor will review the change and confirm via the portal.",
+      "isCollapsed": true
+    },
+    {
+      "id": 6,
+      "question": "How can I edit my personal contact details?",
+      "answer": "You can update your profile information, including phone number and email, from the My Profile section. Look for the 'Edit Details' button on that page. After making changes, click 'Save' to ensure your doctor and the system have your most current contact information.",
+      "isCollapsed": true
+    }
+  ]

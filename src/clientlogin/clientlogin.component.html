@@ -1,0 +1,56 @@
+<form #loginForm="ngForm" class="login">
+    <div>
+        <h2 class="pageTitle">Please Login to Continue!!!!</h2>
+        <p class="label">User Name<span class="required">*</span>
+        </p>
+        <input class="input" type="text" name="uname" [(ngModel)]="uname" placeholder="Enter your phone number" required #username="ngModel" pattern="^\d{10}$" />
+        <p class="errormsg" *ngIf="username.invalid && username.touched">
+            <span *ngIf="username.errors?.['required']">
+                Username is required.
+            </span>
+            <span *ngIf="username.errors?.['pattern']">
+                Please Enter 10 digit Phone Number
+            </span>
+            <span *ngIf="invaluser">
+                Invalid Username
+            </span>
+        </p>
+        <p class="label">Password<span class="required">*</span>
+        </p>
+        <input class="input" [type]="passwordFieldType" placeholder="Enter your password" name="pwd" [(ngModel)]="pwd" required #password="ngModel" />
+        <i class="toggle-password fa" [ngClass]="passwordFieldType === 'password' ? 'bi-eye' : 'bi-eye-slash'" (click)="togglePasswordVisibility()" ></i>
+        <div class="pwditems">
+            <p class="errormsg">
+                <span *ngIf="password.invalid && password.touched">Password is required</span>
+                <span *ngIf="invalpassword">
+                    Invalid Password
+                </span>
+            </p>
+            <a class="forgotpwd" (click)="forgpwd()">Forgot Password</a>
+           
+        </div>
+        <div class="label">Captcha
+            <p class="cptcha">
+                <span class="capcthatxt">{{gencaptcha}}</span>                
+            </p>
+            <span>
+                <i class="bi-bootstrap-reboot capreset" (click)="generatenewcapctha()"></i>
+            </span>
+        </div>
+        <input type="text" placeholder="Enter Captcha" class="input" name="captch" (keyup)="capcheck()" [(ngModel)]="captch" required #captcha="ngModel" />
+        <p class="errormsg" *ngIf="captcha.invalid && captcha.touched">
+            <span *ngIf="captcha.errors?.['required']">
+                Captcha is required.
+            </span>
+        </p>
+        <p class="errormsg" *ngIf="capmismatch && captcha.touched && captch!=''"> 
+            Captcha doesn't match
+        </p>
+    </div>
+    <div class="buttons">
+        <button class="loginBtn" [ngClass]="loginForm.valid && !capmismatch ? 'validlogin' : ''" type="submit" (click)="clientlogin()">Login</button>
+        <button class="signupBtn">
+            <a href="/signup">SignUp</a>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,93 @@
+.mainOurFacilities {
+    position: relative;
+    margin-bottom: 2vw;
+}
+
+.title {
+    position: relative;
+    left: 5.5vw;
+    font-size: 2vw;
+    font-weight: 700;
+    color: black;
+    margin-top: 2vw;
+}
+
+.facility-img {
+    border: 0.2vw solid;
+}
+
+.carousel {
+    display: flex;
+    position: relative;
+    top: 3vw;
+    left: 7vw;
+}
+
+.facility-details {
+    font-size: 1.2vw;
+}
+
+.carousel-slides {
+    min-width: 33vw;
+    transition: transform 1s;
+}
+
+p.pharmacy-desc {
+    width: 17vw;
+}
+
+.prev {
+    position: absolute;
+    margin-top: -8vw;
+    left: 2vw;
+    background-color: transparent;
+    border: none;
+    font-size: 2vw;
+    color: black;
+}
+
+.next {
+    position: absolute;
+    margin-top: -8vw;
+    left: 91vw;
+    background-color: transparent;
+    border: none;
+    font-size: 2vw;
+    color: black;
+}
+
+.facility-name {
+    font-size: 2vw;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    margin-top: 1vw;
+}
+
+.facility-desc {
+    text-align: center;
+    font-size: 1.1vw;
+}
+
+.disabledArrow {
+    color: lightgray;
+}
+
+.enabledArrow {
+    color: black;
+}
+ 
+.mainPartneredPharmacy{
+    overflow: hidden;
+    height: 25vw;
+    background: lightseagreen !important;
+}
+
+p.pharmacy-name {
+    font-weight: 700;
+}
+
+p.pharmacy-location {
+    font-weight: 700;
+    margin-left: 2.5vw;
+}

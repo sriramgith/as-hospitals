@@ -1,0 +1,20 @@
+.contactus{
+    padding-left: 2vw;
+    padding-top: 1vw;
+    height: auto;
+}
+
+.reachslide{
+    margin-left: 37vw;
+    margin-top: 5vw;
+    width: 29%;
+    margin-bottom: 3vw;
+}
+
+::ng-deep.reachslide .carousel-control-prev{
+    margin-top:-1vw;
+}
+
+::ng-deep.reachslide .carousel-control-next{
+    margin-top:-1vw;
+}

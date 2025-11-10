@@ -1,0 +1,34 @@
+[
+    {
+        "imagePath": "/Assets/doc1.jpg",
+        "name": "Dr. Akshaya",
+        "specialization": "Clinical Director",
+        "qualification": "Ph.D. in Clinical Psychology",
+        "password": "Aksh@2621",
+        "phone" : "6381660034"
+    },
+    {
+        "imagePath": "/Assets/doc2.jpg",
+        "name": "Dr. Sriram",
+        "specialization": "Clinical Director",
+        "qualification": "Ph.D. in Clinical Psychology",
+        "password": "Srir@2126",
+        "phone" : "8667808505"
+    },
+    {
+        "imagePath": "/Assets/doc1.jpg",
+        "name": "Dr. Sriya",
+        "specialization": "Child Specialist",
+        "qualification": "Psy.D. in Child Psychology",
+        "password": "Sriy@2621",
+        "phone" : "8200629829"
+    },
+    {
+        "imagePath": "/Assets/doc1.jpg",
+        "name": "Dr. Riya",
+        "specialization": "Couples Therapist",
+        "qualification": "M.S. in Couple Family Therapy",
+        "password": "Riya@2126",
+        "phone" : "9445257260"
+    }
+]

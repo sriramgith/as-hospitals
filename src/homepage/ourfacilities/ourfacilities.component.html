@@ -1,0 +1,16 @@
+<div class="facilities">
+    <h2 class="title">Our Facilities</h2>
+    <button [disabled]="prevdisabled" class="prevnextbtn prevbtn" [ngClass]="prevdisabled ? 'btndisabled' : ''" (click)="onslidechange('prev')">
+        <i class="bi bi-chevron-left"></i>
+    </button>
+    <div class="slides">
+        <div *ngFor="let facilities of visibleFacilities" class="items">
+            <img [src]="facilities.img" class="facimg" />
+            <h5 class="facetitle">{{facilities.fieldname}}</h5>
+            <p class="facdetail">{{facilities.fielddetails}}</p>
+        </div>
+    </div>
+    <button [disabled]="nextdisabled" class="prevnextbtn nextbtn" [ngClass]="nextdisabled ? 'btndisabled' : ''" (click)="onslidechange('next')">
+        <i class="bi bi-chevron-right"></i>
+    </button>
+</div>

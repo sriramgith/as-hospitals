@@ -1,0 +1,41 @@
+<form #loginForm="ngForm" class="login">
+    <div>
+        <h2 class="pageTitle">Hey Doc!!! Login to Continue</h2>
+        <p class="label">User Name<span class="required">*</span>
+        </p>
+        <input class="input" type="text" name="uname" [(ngModel)]="uname" placeholder="Enter your phone number" required #username="ngModel" pattern="^\d{10}$" />
+        <p class="errormsg" *ngIf="username.invalid && username.touched">
+            <span *ngIf="username.errors?.['required']">
+                Username is required.
+            </span>
+        
+            <span *ngIf="username.errors?.['pattern']">
+                Please Enter 10 digit Phone Number
+            </span>
+
+            <span *ngIf="uname.length > 10">
+                10 digit Number
+            </span>
+
+            <span *ngIf="invaluser">
+                Invalid Username
+            </span>
+        </p>
+        <p class="label">Password<span class="required">*</span>
+        </p>
+        <input class="input" [type]="passwordFieldType" placeholder="Enter your password" name="pwd" [(ngModel)]="pwd" required #password="ngModel" />
+        <i class="toggle-password" [ngClass]="passwordFieldType === 'password' ? 'bi-eye' : 'bi-eye-slash'" (click)="togglePasswordVisibility()" ></i>
+        <div class="pwditems">
+            <p class="errormsg">
+                <span *ngIf="password.invalid && password.touched">Password is required</span>
+                <span *ngIf="invalpassword">
+                    Invalid Password
+                </span>
+            </p>
+            <a class="forgotpwd" (click)="forgpwd()">Forgot Password</a>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="loginBtn" [ngClass]="loginForm.valid ? 'validlogin' : ''" type="submit" (click)="doclogin()">Login</button>
+    </div>
+</form>

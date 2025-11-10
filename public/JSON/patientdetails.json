@@ -1,0 +1,56 @@
+[{
+    "name": "Harish",
+    "phone": "8667808505",
+    "password":"Hari@123",
+    "email": "harish@gmail.com",
+    "age": "26",
+    "illness": "OCD and Anger Issues",
+    "doctor" : "Akshaya",
+    "lastReview" : "23-10-25",
+    "task" : "Reduce anger and do meditation",
+    "nextReview" : "28-10-25",
+    "todaytask" : ""
+},
+{
+    "name": "Swathi",
+    "phone": "6381660034",
+    "password":"Swat@345",
+    "email": "swathi@gmail.com",
+    "age": "27",
+    "illness": "OCD and Anger Issues",
+    "doctor" : "Sriram",
+    "lastReview" : "23-10-25",
+    "task" : "Reduce anger and do meditation",
+    "nextReview" : "28-10-25",
+    "todaytask" : ""
+},
+
+{
+    "name": "Sai",
+    "phone": "9445257260",
+    "password":"Sai@5678",
+    "email": "sai@gmail.com",
+    "age": "26",
+    "illness": "OCD and Anger Issues",
+    "doctor" : "Sriya",
+    "lastReview" : "23-10-25",
+    "task" : "Reduce anger and do meditation",
+    "nextReview" : "28-10-25",
+    "todaytask" : ""
+},
+
+{
+    "name": "Amy",
+    "phone": "8200629829",
+    "password":"Amy@6789",
+    "email": "amy@gmail.com",
+    "age": "26",
+    "illness": "OCD and Anger Issues",
+    "doctor" : "Riya",
+    "lastReview" : "23-10-25",
+    "task" : "Reduce anger and do meditation",
+    "nextReview" : "28-10-25",
+    "todaytask" : ""
+}
+
+]

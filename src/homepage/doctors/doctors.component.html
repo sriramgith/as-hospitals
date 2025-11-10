@@ -1,0 +1,13 @@
+<div class="homepagedoctors">
+    <h2>Meet our Amazing Doctors</h2>
+    <ngb-carousel #carousel [wrap]="true" class="ngcarousel" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+       <ng-template ngbSlide *ngFor="let team of teamMembers; let i=index" [id]="'slide-'+i">
+            <div class="doctors">
+                <img class="docimage" [src]="team.imagePath" />
+                <p class="docname">{{team.name}}</p>
+                <p class="docdesgination">{{team.specialization}}</p>
+                <p class="docdesgination docspecialization">{{team.qualification}}</p>
+            </div>
+       </ng-template>
+    </ngb-carousel>
+</div>

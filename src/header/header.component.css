@@ -1,0 +1,69 @@
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    height: 5vw;
+    box-shadow: 0 0.2vw 0.4vw 0 rgba(0, 0, 0, 0.1);
+    background: white !important;
+}
+
+.logo {
+    height: 4vw;
+    width: auto;
+    margin-left: 3vw;
+}
+
+.home {
+    margin-right: auto; 
+    color: black !important;
+    font-size: 1.1vw;
+    width: 4vw;
+}
+
+.Signup {
+    margin-left: 2vw;
+    background: none;
+}
+
+.Signup a {
+    background: green;
+    padding: 0.65vw;
+    border-radius: 0.5vw;
+}
+
+.login {
+    margin-left: 0.5vw;
+    background: none;
+}
+
+.login a{
+    background: blue;
+    padding: 0.65vw;
+    border-radius: 0.5vw;
+}
+
+.logout {
+    margin-left: 0.5vw;
+    background: none;
+}
+
+.logout{
+    background: red;
+    padding: 0.65vw;
+    border-radius: 0.5vw;
+}
+
+.client {
+   background: none;
+}
+
+.client a{
+    background: blueviolet;
+}
+
+.main-header a, .main-header button {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: white;
+}

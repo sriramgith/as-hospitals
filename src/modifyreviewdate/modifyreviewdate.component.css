@@ -1,0 +1,65 @@
+.modifydate{
+    background: white;
+    padding: 2vw;
+    padding-bottom: 1vw;
+}
+
+.dtpickr{
+    cursor: pointer;
+}
+
+.requestbtn{
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    padding: 0.35vw;
+    border-radius: 0.5vw;
+    margin-top: 1.2vw;
+}
+
+.requestbtn:hover{
+    background: blueviolet;
+}
+
+.requestbtn:disabled{
+    background: grey;
+}
+
+.errormsg {
+    color: red;
+    font-size: 1.15vw;
+    margin-bottom: 0vw;
+    margin-top: 0.1vw;
+}
+
+.cancelbtn{
+    margin-left: 1vw;
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    padding: 0.35vw;
+    border-radius: 0.5vw;
+    margin-top: 1.2vw;
+}
+
+.cancelbtn:hover{
+    background: blue;
+}
+
+.closebutn{
+    background: none;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: -0.2vw;
+    left: 21vw;
+    font-size: 1.75vw;
+    color: black;
+    font-weight: 500;
+}
+
+.closebutn:hover{
+    color: blue;
+}

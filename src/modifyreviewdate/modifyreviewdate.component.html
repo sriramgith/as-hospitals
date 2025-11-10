@@ -1,0 +1,10 @@
+<div class="modifydate" #modifyForm>
+    <h5>Please Select a date</h5>
+    <button class="closebutn" (click)="closereq();">x</button>
+    <input type="date" [(ngModel)]="newDate" class="dtpickr" name="newDateInput" required #dateInput="ngModel" />
+    <p class="errormsg" *ngIf="dateInput.invalid && dateInput.touched">Please Enter Date</p>
+    <p>
+        <button class="requestbtn" [disabled]="dateInput.invalid" (click)="raisereq()">Request</button>
+        <button class="cancelbtn" (click)="closereq()">Cancel</button>
+    </p>
+</div>

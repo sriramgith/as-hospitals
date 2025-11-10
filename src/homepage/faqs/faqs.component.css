@@ -1,0 +1,52 @@
+.faqs{
+    padding-left: 5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    background: lightseagreen !important;
+    margin-bottom: -2vw;
+}
+.title{
+    margin-bottom: 2vw;
+}
+
+.questions{
+    background: black;
+    width: 82vw;
+    padding: 1.5vw;
+    border: 0.1px solid;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+}
+
+.questions button{
+    background: none!important;
+    outline: none!important;
+    border: none!important;
+    color: white!important;
+    box-shadow: none !important;
+}
+
+.quesarrow{
+    position: absolute;
+    right: 13vw;
+    color: white;
+}
+
+.questions p {
+    margin-top: 0.75vw;
+}
+
+.answer{
+    background: lightseagreen;
+    width: 82vw;
+    padding: 1.5vw;
+    font-weight: 500;
+    color: white;
+    border: 0.1px solid;
+}
+
+.accordion-button::after {
+    filter: brightness(0) invert(1);
+    transition: transform 0.8s ease;
+  }

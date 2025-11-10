@@ -1,0 +1,280 @@
+.clientPage{
+    min-height: 32.3vw;
+    z-index: 100;
+}
+
+.clientname{
+    margin-left: 4vw;
+    margin-top: 1vw;
+}
+
+.edit{
+    position: absolute;
+    left: 89.75vw;
+    top: 6.2vw;
+}
+
+.editBtn{
+    background: black;
+    color: white;
+    padding: 0.5vw;
+    border: none;
+}
+
+.editBtn:hover {
+    background: blueviolet;
+}
+
+.clientDetails{
+    margin-left: 2vw;
+}
+
+.details{
+    display: flex;
+    background: lightgrey;
+    padding: 2vw;
+    width: 93vw;
+    margin-left: 2vw;
+    padding-bottom: 3.01vw;
+}
+
+.detailstitle{
+    margin-right: 1vw;
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+
+.detailstitle span {
+    font-size: 1.3vw;
+    color: blueviolet;
+}
+
+.nextdate {
+    font-size: 1.4vw;
+    color: blueviolet;
+    font-weight: 700;
+}
+
+.nextrvw{
+    position: absolute;
+    margin-top: -4.5vw;
+    margin-left: 33vw;
+}
+
+.modifydate {
+    font-size: 1.2vw;
+    margin-left: 37vw;
+    color: blueviolet;
+    position: absolute;
+    margin-top: -2.5vw;
+    cursor: pointer;
+}
+
+.task{
+    width: 93vw;
+    padding: 0.5vw;
+}
+
+.clntTble{
+    margin-left: 2vw;
+    margin-top: 1.5vw;
+}
+
+.charcount {
+    position: absolute;
+    margin-left: -4.2vw;
+    margin-top: 5vw;
+}
+
+.errormsg {
+    color: red;
+    font-size: 1.2vw;
+    margin-bottom: 0vw;
+}
+
+.saveBtn{
+    background: black;
+    color: white;
+    padding: 0.5vw;
+    border: none;
+    margin-top: 0.5vw;
+    border-radius: 0.5vw;
+}
+
+.saveBtn:disabled{
+    background: grey;
+    pointer-events: none;
+}
+
+.saveBtn:hover {
+    background: blueviolet;
+}
+
+.successmsg{
+    color: Green;
+    margin-left: 20vw;
+    font-size: 3vw;
+    font-weight: 500;
+    margin-top: 3vw;
+}
+
+.modal-overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dims the background (semi-transparent) */
+    background-color: rgba(0, 0, 0, 0.4); 
+    /* Ensures it sits high above the main page content */
+    z-index: 999; 
+    /* Centers the modal content box horizontally and vertically */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    /* CRITICAL: Apply the blur here to the content BEHIND the overlay */
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(4px); /* For compatibility */
+}
+
+.modal{
+    background: white;
+    left: 37vw;
+    top: 2vw;
+    position: fixed;
+    display: flex;
+    height: auto;
+    padding: 2.5vw;
+    width: auto;
+}
+
+.closebtn{
+    background: none;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: -0.2vw;
+    left: 23vw;
+    font-size: 1.75vw;
+    color: black;
+    font-weight: 500;
+}
+
+.closebtn:hover{
+    color: blue;
+}
+
+.formtitle {
+    margin-top: -2vw;
+    margin-bottom: 2vw;
+}
+
+.formsave{
+    background: black;
+    color: white;
+    padding: 0.5vw;
+    border: none;
+    margin-top: 0.5vw;
+    border-radius: 0.5vw;
+    width: 5vw;
+}
+
+.formsave:disabled{
+    background: grey;
+    pointer-events: none;
+}
+
+.formsave:hover {
+    background: blueviolet;
+}
+
+.inptfld{
+    margin-bottom: 0.5vw;
+}
+
+.inptfld input {
+    width: 20vw;
+}
+
+.cancelbtn{
+    margin-left: 1.5vw;
+    width: 6vw;
+}
+
+.cancelbtn:hover {
+    background: blue;
+}
+
+.toaster{
+    position: absolute;
+    background-color: red;
+    color: white;
+    width: 22vw;
+    height: 5.5vw;
+    top: 5vw;
+    left: 75vw;
+    font-weight: 500;
+    padding-left: 2.5vw;
+}
+
+.toasterclose{
+    color: black;
+    text-decoration: none;
+    outline: none;
+    margin-left: 18vw;
+    cursor: pointer;
+}
+
+.toasterclose:hover{
+    color: white;
+}
+
+.loader{
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    left: 47vw;
+    margin-top: -10vw;
+}
+
+.moodtracker{
+    margin-bottom:2vw;
+}
+
+.moodlabel{
+    margin-bottom: 1.5vw;
+}
+
+.activemood {
+    background: blueviolet;
+    padding: 0.75vw;
+    color: white;
+    border-radius: 1vw;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0.01px solid;
+}
+
+.inactivemood {
+    background: lightgray;
+    padding: 0.75vw;
+    color: white;
+    border-radius: 1vw;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+    border-right: 0.01px solid;
+}
+
+.item2{
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.item1{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

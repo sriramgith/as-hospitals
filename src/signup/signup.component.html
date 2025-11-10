@@ -1,0 +1,111 @@
+<div class="signup">
+    <h2 class="title1">Hey Friend!!</h2>
+    <h2 class="title2" style="margin-left: 1vw;">Let's Get Started!!</h2>
+    <h2 class="title2">SignUp with your Details!!</h2>
+    <form [formGroup]="signUp" (ngSubmit)="submit()">
+        <h4>First Name<span class="mandatoryfield">*</span></h4>
+        <div>
+            <input type="text" formControlName="firstName" required class="inputfield" placeholder="Enter your first name"/>
+            <p class="errormsg" *ngIf="signUp.controls['firstName'].invalid && signUp.controls['firstName'].touched">
+                Please enter first name
+            </p>
+        </div>
+       
+        <h4>Last Name</h4>
+        <div>
+            <input type="text" formControlName="lastName" class="inputfield" placeholder="Enter your last name"/>
+        </div>
+
+        <h4>Age<span class="mandatoryfield">*</span></h4>
+        <div style="margin-bottom: 0.5vw;">
+            <input type="number" formControlName="age" class="inputfield" placeholder="Enter your age"/>
+            <p class="errormsg" *ngIf="signUp.controls['age'].invalid && signUp.controls['age'].touched">
+                <span *ngIf="signUp.controls['age'].hasError('required')">Please enter age</span>
+                <span *ngIf="signUp.controls['age'].hasError('pattern')">Please enter valid 2 digit age</span>
+            </p>
+        </div>
+
+        <h4>Gender<span class="mandatoryfield">*</span></h4>
+        <div style="margin-bottom: 1vw;">
+        <div class="genderbtngrp">
+            <button type="button" class="malebtn" [class.active]="signUp.get('gender')?.value === 'Male'" (click)="signUp.get('gender')?.setValue('Male')">Male</button>
+            <button type="button" class="femalebtn" [class.active]="signUp.get('gender')?.value === 'Female'" (click)="signUp.get('gender')?.setValue('Female')">Female</button>
+        </div>
+
+        <p class="errormsg" *ngIf="signUp.controls['gender'].invalid && signUp.controls['gender'].touched">
+            Please select gender
+        </p>
+        </div>
+
+        <h4>Email<span class="mandatoryfield">*</span></h4>
+        <div>
+            <input type="email" formControlName="email" class="inputfield" placeholder="Enter your email"/>
+            <p class="errormsg" *ngIf="signUp.controls['email'].invalid && signUp.controls['email'].touched">
+                <span *ngIf="signUp.controls['email'].hasError('required')">Please enter email</span>
+                <span *ngIf="signUp.controls['email'].hasError('email') && !signUp.controls['email'].hasError('invalidemail')">Invalid Email Address</span>
+                <span *ngIf="signUp.controls['email'].hasError('invalidemail')">Invalid test email address</span>
+            </p>
+        </div>
+
+        <h4>Phone Number<span class="mandatoryfield">*</span></h4>
+        <div>
+            <div style="display: flex; gap: 1vw;">
+                <div ngbDropdown class="inputfield countrycode">
+                    <button ngbDropdownToggle type="button">{{signUp?.get('countryCode')?.value}}</button>
+                    <div ngbDropdownMenu>
+                        <button ngbDropdownItem type="button" (click)="signUp.get('countryCode')?.setValue('+91')">+91</button>
+                        <button ngbDropdownItem type="button" (click)="signUp.get('countryCode')?.setValue('+1')">+1</button>
+                        <button ngbDropdownItem type="button" (click)="signUp.get('countryCode')?.setValue('+44')">+44</button>                
+                    </div>
+                </div>
+                
+                <input type="number" formControlName="phone" style="width: 19.5vw;" class="inputfield" placeholder="Enter your phone number"/>
+            </div>
+            <p class="errormsg" *ngIf="signUp.controls['phone'].invalid && signUp.controls['phone'].touched">
+                <span *ngIf="signUp.controls['phone'].hasError('required')">Please enter phone number</span>
+                <span *ngIf="signUp.controls['phone'].hasError('pattern')">Invalid phone number</span>
+            </p>
+        </div>
+
+        <h4>Password<span class="mandatoryfield">*</span></h4>
+        <div>
+            <input [type]="passtype ? 'text' : 'password'" formControlName="password" class="inputfield" placeholder="Enter a new password"/>
+            <i class="passeye" [ngClass]="passtype ? 'bi-eye-slash' : 'bi-eye'" (click)="togglepass()"></i>
+            <p class="errormsg" *ngIf="signUp.controls['password'].touched">
+                <span *ngIf="signUp.controls['password'].hasError('req')">Please enter password</span>
+                <span *ngIf="signUp.controls['password'].hasError('nocaps')">Password should contain atleast 1 capital letter</span>
+                <span *ngIf="signUp.controls['password'].hasError('nospl')">Password should contain atleast 1 special character</span>
+                <span *ngIf="signUp.controls['password'].hasError('nonum')">Password should contain atleast 1 number</span>
+                <span *ngIf="signUp.controls['password'].hasError('minlen')">Please enter atleast 8 Characters</span>
+            </p>
+        </div>
+
+        <h4>Confirm Password<span class="mandatoryfield">*</span></h4>
+        <div>
+            <input [type]="confpasstype ? 'text' : 'password'" formControlName="confirmPassword" class="inputfield" placeholder="Re-enter your password"/>
+            <i class="passeye" [ngClass]="confpasstype ? 'bi-eye-slash' : 'bi-eye'" (click)="toggleconfpass()"></i>
+            <p class="errormsg" *ngIf="signUp.controls['confirmPassword'].touched">
+                <span *ngIf="signUp.controls['confirmPassword'].hasError('required')">Please re-enter password</span>
+                <span *ngIf="signUp.controls['confirmPassword'].value != '' && signUp.hasError('mismatch')">Password not matching</span>
+            </p>
+        </div>
+        <h4>Presenting Illness<span class="mandatoryfield">*</span></h4>
+        <div>
+            <textarea formControlName="presentingIllness" class="textareafield" [(ngModel)]="reasonInput" placeholder="What's your presenting illness"></textarea>
+            <span class="charalen" *ngIf="reasonInput?.length>0">{{reasonInput.length}}/{{maxChars}}</span>
+            <p class="errormsg" *ngIf="signUp.controls['presentingIllness'].invalid && signUp.controls['presentingIllness'].touched">
+                <span *ngIf="signUp.controls['presentingIllness'].hasError('required')">Please enter presenting illness</span>
+                <span *ngIf="signUp.controls['presentingIllness'].hasError('minlength')">Please enter atleast 10 Characters</span>
+                <span *ngIf="signUp.controls['presentingIllness'].hasError('maxlength')">Maximum characters exceded</span>
+            </p>
+        </div>
+
+        <h4>History of Presenting Illness</h4>
+        <div>
+            <textarea formControlName="historyOfPresentingIllness" class="textareafield" placeholder="Any history of your presenting illness"></textarea>
+        </div>
+
+        <button type="submit" class="submitbtn" [ngClass]="signUp.invalid ? 'submitdisabled' : ''">Signup</button>
+
+    </form>
+</div>

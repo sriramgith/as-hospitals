@@ -1,0 +1,35 @@
+<!-- <div class="faqs">
+    <h3 class="title">Frequently Asked Questions</h3>
+    <div *ngFor="let quest of questions">
+        <div class="questions" (click)="toggleitem(quest)">
+            <p>
+                <span class="qno">{{quest.id}}.</span>
+                {{quest.question}}
+                <i class="fa quesarrow" [ngClass]="quest.isCollapsed ? 'bi-chevron-down' : 'bi-chevron-up'"></i>
+            </p>
+        </div>
+        <div class="answer" [ngbCollapse]="quest.isCollapsed">
+            <p>{{quest.answer}}</p>
+        </div>
+    </div>
+</div> -->
+
+<div class="faqs">
+    <h3 class="title">Frequently Asked Questions</h3>
+    <div ngbAccordion [closeOthers]="false">
+        <div ngbAccordionItem *ngFor="let quest of questions">
+            <div ngbAccordionHeader class="questions">
+                <button ngbAccordionButton>
+                    <span class="qno">{{quest.id}}.</span>
+                    {{quest.question}}
+                </button>
+            </div>
+            <div ngbAccordionCollapse class="answer">
+                <p ngbAccordionBody>{{quest.answer}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  
+  

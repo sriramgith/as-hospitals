@@ -1,0 +1,48 @@
+<div class="doctorpage">
+    <h2 [innerHTML]="'Hello '+ user"></h2>
+    <div class="patdashbrd">
+        <table class="patienttable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Presenting Illness</th>
+                    <th>Completion Status</th>
+                    <th>View Progress</th>
+                    <th>Send Remainder</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let patient of allpatients">
+                    <td>{{patient.name}}</td>
+                    <td>{{patient.email}}</td>
+                    <td>{{patient.illness}}</td>
+                    <td *ngIf="patient.todaytask.length > 0">
+                        <img class="tickimg" src="/Assets/done.png" />
+                    </td>
+                    <td *ngIf="patient.todaytask.length == 0">
+                        <img class="crossimg" src="/Assets/cross.png" />
+                    </td>
+                    <td>
+                        <i class="fa bi-eye progressicon" ngbTooltip="View Patient Progress Note" (click)="viewprogress(patient)"></i>
+                    </td>
+                    <td>
+                        <i class="fa bi-envelope" (mouseover)="showtooltip(patient)" (mouseout)="hidetooltip(patient)" [ngClass]="patient.todaytask.length > 0 ? 'reminderdisabled' : 'reminderbtn'" (click)="senderminder(patient)"></i>
+                        <p class="tooltp" *ngIf="patient.istooltipvisible">
+                            <span class="tooltiptxt">Send Email Reminder</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<ng-template #progress let-modal>
+    <div class="patpopup">
+        <h3 class="poptitle">Progress Note of {{patname}}</h3>
+        <p class="closebtn" (click)="closepop()">x</p>
+        <h5>Today's Task</h5>
+        <textarea class="task" readonly>{{task}}</textarea>    
+    </div>
+</ng-template>

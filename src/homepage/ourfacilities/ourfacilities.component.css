@@ -1,0 +1,61 @@
+.facilities {
+    padding-left: 2.5vw;
+    padding-top: 1vw;
+    background-color: lightseagreen !important;
+}
+
+.title{
+    margin-bottom: 2vw;
+    margin-left: 1.3vw;
+    margin-top: 1vw;
+}
+
+.facimg {
+    width: 20.5vw;
+    height: 20.5vw;
+    border: 2px solid;
+}
+
+.slides {
+    display: flex;
+    margin-left: 1.5vw;
+    padding-bottom: 2vw;
+}
+
+.items{
+    margin-right: 1.5vw;
+    width: 22vw;
+}
+
+.facetitle{
+    font-weight: 500;
+    margin-left: 3.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.facdetail{
+    margin-left: 0.5vw !important;
+}
+
+.prevnextbtn {
+    border: none;
+    background: none;
+    color: black;
+    font-size: 3.5vw;
+    position: absolute;
+}
+
+.prevbtn {
+    left: -0.2vw;
+    margin-top: 7vw;
+}
+
+.nextbtn {
+    left: 94.3vw;
+    margin-top: -20.9vw;
+}
+
+.btndisabled {
+    color: grey !important;
+    opacity: 0.8;
+}

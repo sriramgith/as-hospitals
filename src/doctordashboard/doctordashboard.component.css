@@ -1,0 +1,102 @@
+.doctorpage{
+    margin-top: 2vw;
+    margin-left: 15vw;
+    height: 31.2vw;
+}
+.patdashbrd{
+    margin-top: 3vw;
+}
+
+table.patienttable {
+    max-width: 82vw;
+}
+
+.patienttable th, .patienttable td{
+    border: 1px solid;
+    padding: 0.5vw;
+    text-align: center;
+}
+
+.tickimg {
+    width: 1.75vw;
+    height: 1.75vw;
+}
+
+.crossimg {
+    width: 1vw;
+    height: 1vw;
+}
+
+.progressicon{
+    width: 1.75vw;
+    height: 1.75vw;
+    cursor: pointer;
+}
+
+.reminderdisabled{
+    cursor: context-menu;
+    pointer-events: none;
+    filter: invert(0.75);
+    width: 1.75vw;
+    height: 1.75vw;
+}
+
+.reminderbtn{
+    cursor: pointer;
+    pointer-events: auto;
+    width: 1.75vw;
+    height: 1.75vw;
+}
+
+.patpopup{
+    padding: 2vw;
+}
+
+.poptitle{
+    color: red;
+}
+
+.task{
+    width: 50vw;
+    height: 9vw;
+    padding: 1vw;
+    outline: none;
+}
+
+.tooltp{
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 0.5vw;
+    font-size: 0.8vw;
+    margin-top: -4.2vw;
+    margin-left: 1vw;
+}
+
+.tooltp::after{
+    content: " ";
+    position: absolute;
+    margin-top: 1.7vw;
+    margin-left: -4.5vw;
+    border: .4vw solid transparent;
+    border-top-color: #000;
+}
+
+::ng-deep .modal-content{
+    width: 54vw;
+}
+
+.closebtn{
+    position: absolute;
+    margin-left: 50vw;
+    cursor: pointer;
+    font-size: 2vw;
+    color: black;
+    font-weight: 500;
+    margin-top: -5.5vw;
+    cursor: pointer;
+}
+
+.closebtn:hover{
+    color: blue;
+}

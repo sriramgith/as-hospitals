@@ -1,0 +1,131 @@
+.signup{
+    margin-left: 39vw;
+    margin-top: 3vw;
+}
+
+.title1{
+    margin-bottom: 2vw;
+    color: green;
+    margin-left: 4vw;
+}
+
+.title2{
+    margin-left: -2.5vw;
+    margin-bottom: 2vw;
+    color: green;
+}
+
+.inputfield{
+    margin-top: 0.5vw;
+    padding: 0.5vw;
+    width: 25vw;
+    height: 3vw;
+    border: 0.1px, solid;
+    border-radius: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.countrycode{
+    width: 5vw;
+    border: 1px solid;
+}
+
+.countrycode button{
+    background: none;
+    outline: none;
+    border: none
+}
+
+.inputdropdown{
+    margin-right: 1vw;
+    height: 3vw;
+    border: 0.1px, solid;
+    border-radius: 0.5vw;
+    margin-bottom: 0.5vw;
+    width: 4.5vw;
+}
+
+.textareafield{
+    margin-top: 0.5vw;
+    padding: 0.5vw;
+    width: 45vw;
+    height: 7vw;
+    border: 0.1px, solid;
+    border-radius: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.mandatoryfield{
+    color: red;
+}
+
+.errormsg {
+    color: red;
+    font-size: 1.2vw;
+    margin-bottom: 0.5vw;
+}
+
+.radioinput2{
+    margin-left: 1vw;
+}
+
+.radioinput, .radioinput2 {
+    margin-right: 0.4vw;
+    accent-color: green;
+}
+
+.gender{
+    font-size: 1.5vw;
+}
+
+.genderbtngrp button{
+    border: none;
+    outline: none;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    font-weight: 500;
+    color: black;
+    background-color: lightgray;
+}
+
+.malebtn{
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    border-right: 0.01px solid white!important;
+}
+
+.femalebtn{
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+}
+
+.genderbtngrp button.active{
+    background-color: blueviolet!important;
+    color: white!important;
+}
+
+.passeye{
+    margin-left: -1.75vw;
+    cursor: pointer;
+}
+
+.charalen {
+    position: absolute;
+    margin-top: 7.5vw;
+    margin-left: -4vw;
+    font-size: 1.2vw;
+}
+
+.submitbtn{
+    height: 3vw;
+    width: 5.5vw;
+    border-radius: 0.5vw;
+    border: none;
+    background-color: green;
+    color: white;
+}
+
+.submitdisabled{
+    background-color: grey;
+}
+
